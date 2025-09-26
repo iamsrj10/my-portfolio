@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom glow for the hero card */
+.hero-card {
+  position: relative; /* ensure parent is positioned */
+}
+
+.hero-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(
+    ellipse at 20% 20%,
+    rgba(99, 102, 241, 0.08),
+    transparent 22%
+  );
+  filter: blur(18px);
+  z-index: 0;
+  border-radius: 1rem; /* matches rounded-2xl */
+  pointer-events: none;
+}
+/* Card hover effect */
+.card-hover {
+  transition: transform 220ms cubic-bezier(.2,.8,.2,1),
+              box-shadow 220ms cubic-bezier(.2,.8,.2,1),
+              border-color 220ms cubic-bezier(.2,.8,.2,1);
+  transform-origin: center;
+  will-change: transform, box-shadow;
+}
+
+.card-hover:hover {
+  transform: scale(1.03);
+  border-color: rgba(59,130,246,0.45); /* Tailwind blue-500 */
+  box-shadow:
+    0 8px 30px rgba(14,165,233,0.08), 
+    0 4px 10px rgba(59,130,246,0.12), 
+    0 0 18px rgba(59,130,246,0.12);
+}
+
+.card-hover:focus,
+.card-hover:focus-visible {
+  outline: none;
+  box-shadow:
+    0 8px 30px rgba(14,165,233,0.12),
+    0 0 28px rgba(59,130,246,0.18);
+}
