@@ -4,8 +4,10 @@ import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { SiNaukri } from "react-icons/si";
 import ThreeCube from "./ThreeCube";
 
+const baseUrl = import.meta.env.BASE_URL || '/'
+
 export default function ProfileCard({
-  avatar = "/my-portfolio/rabj.png",
+  avatar = `${baseUrl}rabj.png`,
   name = "Rabin Jeo",
   subtitle = "MCA • Web Developer • Bangalore",
   linkedin = "https://www.linkedin.com/in/your-profile",
