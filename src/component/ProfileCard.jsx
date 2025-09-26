@@ -5,7 +5,7 @@ import { SiNaukri } from "react-icons/si";
 import ThreeCube from "./ThreeCube";
 
 export default function ProfileCard({
-  avatar = "/rabj.png",
+  avatar = "/my-portfolio/rabj.png",
   name = "Rabin Jeo",
   subtitle = "MCA • Web Developer • Bangalore",
   linkedin = "https://www.linkedin.com/in/your-profile",
